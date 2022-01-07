@@ -1,0 +1,6 @@
+framework module Pods_tmdb_mvvm_pure {
+  umbrella header "Pods-tmdb-mvvm-pure-umbrella.h"
+
+  export *
+  module * { export * }
+}
