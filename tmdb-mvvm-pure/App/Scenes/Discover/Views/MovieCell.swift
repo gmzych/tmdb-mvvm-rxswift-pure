@@ -13,6 +13,10 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    override func awakeFromNib() {
+        configureAccessiblityId()
+    }
+    
     private struct Constants {
         static let maxHeight: CGFloat = 400
     }
@@ -36,4 +40,10 @@ class MovieCell: UICollectionViewCell {
         
         return size.height
     }
+
+    private func configureAccessiblityId() {
+           imageView.accessibilityIdentifier = "discoverMovieCellImage"
+           titleLabel.accessibilityIdentifier = "discoverMovieCellTitleLabel"
+           subtitleLabel.accessibilityIdentifier = "discoverMovieCellSubtitleLabel"
+       }
 }
