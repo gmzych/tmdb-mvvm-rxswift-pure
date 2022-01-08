@@ -6,6 +6,7 @@ class tmdb_mvvm_pureUITests_BDD: tmdb_mvvm_pureUITestsBase {
     // m.in: Logowanie - LoginTests, DiscoveryScreen - DiscoverTests, SearchScreen ScreenTests
     // Zamienic Steps na Screens
     // Screens rozbic na np DiscoveryTests i SearchTests itd
+    ///
     func testLoginsuccees() {
         givenAppIsLaunched()
         loginInputIsTapped(yourUsername:"iostest")
