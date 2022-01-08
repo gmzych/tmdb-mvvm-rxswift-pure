@@ -49,8 +49,8 @@ extension CarouselSectionCell {
     }
     
     private func configureAccessibilityId() {
-            titleLabel.accessibilityIdentifier = "discoverCarouselTitleLabel"
-            subtitleLabel.accessibilityIdentifier = "discoverCarouselSubtitleLabel"
-            collectionView.accessibilityIdentifier = "discoverCarouselCollectionView"
-        }
+        titleLabel.accessibilityIdentifier = "discoverCarouselTitleLabel"
+        subtitleLabel.accessibilityIdentifier = "discoverCarouselSubtitleLabel"
+        collectionView.accessibilityIdentifier = "discoverCarouselCollectionView"
+    }
 }

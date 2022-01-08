@@ -23,7 +23,7 @@ class MovieCell: UICollectionViewCell {
     
     private static let sizingCell = UINib(nibName: String(describing: MovieCell.self), bundle: nil)
         .instantiate(withOwner: nil, options: nil).first! as! MovieCell
-
+    
     static func height(forWidth width: CGFloat) -> CGFloat {
         sizingCell.prepareForReuse()
         sizingCell.layoutIfNeeded()
@@ -40,10 +40,10 @@ class MovieCell: UICollectionViewCell {
         
         return size.height
     }
-
+    
     private func configureAccessiblityId() {
-           imageView.accessibilityIdentifier = "discoverMovieCellImage"
-           titleLabel.accessibilityIdentifier = "discoverMovieCellTitleLabel"
-           subtitleLabel.accessibilityIdentifier = "discoverMovieCellSubtitleLabel"
-       }
+        imageView.accessibilityIdentifier = "discoverMovieCellImage"
+        titleLabel.accessibilityIdentifier = "discoverMovieCellTitleLabel"
+        subtitleLabel.accessibilityIdentifier = "discoverMovieCellSubtitleLabel"
+    }
 }
