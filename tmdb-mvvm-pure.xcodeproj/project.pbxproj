@@ -51,14 +51,15 @@
 		D27F826921FE49D60071513F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826821FE49D60071513F /* LoginViewModel.swift */; };
 		D27F826B21FE4A160071513F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826A21FE4A160071513F /* ViewModelType.swift */; };
 		D27F826E21FE4B440071513F /* TMDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826D21FE4B440071513F /* TMDBApi.swift */; };
-		F48ACFB42790196F00D45B47 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48ACFB32790196F00D45B47 /* BaseTests.swift */; };
-		F48ACFB627901A0E00D45B47 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48ACFB527901A0E00D45B47 /* BaseScreen.swift */; };
-		F4F1B5002789E1E8009CB911 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */; };
-		F4F1B5022789E21E009CB911 /* DiscoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */; };
-		F4F1B5072789E4C2009CB911 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5062789E4C2009CB911 /* LoginScreen.swift */; };
-		F4F1B5092789E573009CB911 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5082789E573009CB911 /* SearchScreen.swift */; };
-		F4F1B50C2789E593009CB911 /* DiscoveryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */; };
-		F4F1B50E2789EE3C009CB911 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B50D2789EE3C009CB911 /* LoginTests.swift */; };
+		F43FC9E82783A447005BFEF9 /* tmdb_mvvm_pureUITests_elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43FC9E72783A447005BFEF9 /* tmdb_mvvm_pureUITests_elements.swift */; };
+		F43FC9F22783AE41005BFEF9 /* LoginSucces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43FC9F12783AE41005BFEF9 /* LoginSucces.swift */; };
+		F43FC9F42783AE81005BFEF9 /* LoginFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43FC9F32783AE80005BFEF9 /* LoginFailure.swift */; };
+		F4BE982C278329B700DA935D /* tmbd_mvvm_pureUITests_TestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE982B278329B700DA935D /* tmbd_mvvm_pureUITests_TestsBase.swift */; };
+		F4BE982E27832CA900DA935D /* tmdb_mvvm_pureUITests_BDD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE982D27832CA900DA935D /* tmdb_mvvm_pureUITests_BDD.swift */; };
+		F4E5BA1427846D2C00DDE64A /* HomePageSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5BA1327846D2C00DDE64A /* HomePageSliders.swift */; };
+		F4E5BA162784CF3400DDE64A /* HomePageHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5BA152784CF3400DDE64A /* HomePageHeaders.swift */; };
+		F4EDA2B02785FC2000957830 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EDA2AF2785FC2000957830 /* SearchPage.swift */; };
+		F4F76769277B02EC0063B22E /* tmdb_mvvm_pureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F76768277B02EC0063B22E /* tmdb_mvvm_pureUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,15 +132,16 @@
 		D27F826821FE49D60071513F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D27F826A21FE4A160071513F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		D27F826D21FE4B440071513F /* TMDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApi.swift; sourceTree = "<group>"; };
-		F48ACFB32790196F00D45B47 /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
-		F48ACFB527901A0E00D45B47 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
-		F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
-		F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTests.swift; sourceTree = "<group>"; };
-		F4F1B5062789E4C2009CB911 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		F4F1B5082789E573009CB911 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
-		F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryScreen.swift; sourceTree = "<group>"; };
-		F4F1B50D2789EE3C009CB911 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		F43FC9E72783A447005BFEF9 /* tmdb_mvvm_pureUITests_elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdb_mvvm_pureUITests_elements.swift; sourceTree = "<group>"; };
+		F43FC9F12783AE41005BFEF9 /* LoginSucces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSucces.swift; sourceTree = "<group>"; };
+		F43FC9F32783AE80005BFEF9 /* LoginFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFailure.swift; sourceTree = "<group>"; };
+		F4BE982B278329B700DA935D /* tmbd_mvvm_pureUITests_TestsBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmbd_mvvm_pureUITests_TestsBase.swift; sourceTree = "<group>"; };
+		F4BE982D27832CA900DA935D /* tmdb_mvvm_pureUITests_BDD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdb_mvvm_pureUITests_BDD.swift; sourceTree = "<group>"; };
+		F4E5BA1327846D2C00DDE64A /* HomePageSliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageSliders.swift; sourceTree = "<group>"; };
+		F4E5BA152784CF3400DDE64A /* HomePageHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHeaders.swift; sourceTree = "<group>"; };
+		F4EDA2AF2785FC2000957830 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		F4F76766277B02EC0063B22E /* tmdb-mvvm-pureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tmdb-mvvm-pureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F76768277B02EC0063B22E /* tmdb_mvvm_pureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdb_mvvm_pureUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				D27F824221FE493C0071513F /* tmdb-mvvm-pure */,
 				D27F825721FE493D0071513F /* tmdb-mvvm-pureTests */,
 				F4F76767277B02EC0063B22E /* tmdb-mvvm-pureUITests */,
+				F43FC9F02783A74B005BFEF9 /* Base */,
 				D27F824121FE493C0071513F /* Products */,
 				FA13A2594665FC00BD98B8E9 /* Pods */,
 				B35FC69B0CEA0749EA6F39F8 /* Frameworks */,
@@ -370,33 +373,49 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		F43FC9EC2783A552005BFEF9 /* XCUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				F43FC9E72783A447005BFEF9 /* tmdb_mvvm_pureUITests_elements.swift */,
+			);
+			path = XCUIElements;
+			sourceTree = "<group>";
+		};
+		F43FC9ED2783A579005BFEF9 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				F43FC9F12783AE41005BFEF9 /* LoginSucces.swift */,
+				F43FC9F32783AE80005BFEF9 /* LoginFailure.swift */,
+				F4E5BA1327846D2C00DDE64A /* HomePageSliders.swift */,
+				F4E5BA152784CF3400DDE64A /* HomePageHeaders.swift */,
+				F4EDA2AF2785FC2000957830 /* SearchPage.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 		F43FC9EE2783A592005BFEF9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F4F1B50D2789EE3C009CB911 /* LoginTests.swift */,
-				F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */,
-				F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */,
-				F48ACFB32790196F00D45B47 /* BaseTests.swift */,
+				F4F76768277B02EC0063B22E /* tmdb_mvvm_pureUITests.swift */,
+				F4BE982D27832CA900DA935D /* tmdb_mvvm_pureUITests_BDD.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F4F1B5052789E496009CB911 /* Screens */ = {
+		F43FC9F02783A74B005BFEF9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F4F1B5062789E4C2009CB911 /* LoginScreen.swift */,
-				F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */,
-				F4F1B5082789E573009CB911 /* SearchScreen.swift */,
-				F48ACFB527901A0E00D45B47 /* BaseScreen.swift */,
+				F4BE982B278329B700DA935D /* tmbd_mvvm_pureUITests_TestsBase.swift */,
 			);
-			path = Screens;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F4F76767277B02EC0063B22E /* tmdb-mvvm-pureUITests */ = {
 			isa = PBXGroup;
 			children = (
 				F43FC9EE2783A592005BFEF9 /* Tests */,
-				F4F1B5052789E496009CB911 /* Screens */,
+				F43FC9EC2783A552005BFEF9 /* XCUIElements */,
+				F43FC9ED2783A579005BFEF9 /* Steps */,
 			);
 			path = "tmdb-mvvm-pureUITests";
 			sourceTree = "<group>";
@@ -657,14 +676,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F1B5072789E4C2009CB911 /* LoginScreen.swift in Sources */,
-				F48ACFB627901A0E00D45B47 /* BaseScreen.swift in Sources */,
-				F4F1B5002789E1E8009CB911 /* SearchTests.swift in Sources */,
-				F4F1B5022789E21E009CB911 /* DiscoveryTests.swift in Sources */,
-				F4F1B50C2789E593009CB911 /* DiscoveryScreen.swift in Sources */,
-				F48ACFB42790196F00D45B47 /* BaseTests.swift in Sources */,
-				F4F1B5092789E573009CB911 /* SearchScreen.swift in Sources */,
-				F4F1B50E2789EE3C009CB911 /* LoginTests.swift in Sources */,
+				F43FC9F22783AE41005BFEF9 /* LoginSucces.swift in Sources */,
+				F4BE982C278329B700DA935D /* tmbd_mvvm_pureUITests_TestsBase.swift in Sources */,
+				F4E5BA162784CF3400DDE64A /* HomePageHeaders.swift in Sources */,
+				F43FC9F42783AE81005BFEF9 /* LoginFailure.swift in Sources */,
+				F4BE982E27832CA900DA935D /* tmdb_mvvm_pureUITests_BDD.swift in Sources */,
+				F4E5BA1427846D2C00DDE64A /* HomePageSliders.swift in Sources */,
+				F4F76769277B02EC0063B22E /* tmdb_mvvm_pureUITests.swift in Sources */,
+				F43FC9E82783A447005BFEF9 /* tmdb_mvvm_pureUITests_elements.swift in Sources */,
+				F4EDA2B02785FC2000957830 /* SearchPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
