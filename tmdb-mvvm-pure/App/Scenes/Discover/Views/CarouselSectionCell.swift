@@ -29,6 +29,8 @@ final class CarouselSectionCell: UITableViewCell {
         collectionViewHeightConstraint.constant = MovieCell.height(forWidth: 140)
         collectionViewHeightConstraint.isActive = true
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
+        configureAccessibilityId()
     }
 }
 
@@ -44,5 +46,11 @@ extension CarouselSectionCell {
         collectionView.tag = row
         collectionView.setContentOffset(collectionView.contentOffset, animated:false) // Stops collection view if it was scrolling.
         collectionView.reloadData()
+    }
+    
+    private func configureAccessibilityId() {
+        titleLabel.accessibilityIdentifier = "discoverCarouselTitleLabel"
+        subtitleLabel.accessibilityIdentifier = "discoverCarouselSubtitleLabel"
+        collectionView.accessibilityIdentifier = "discoverCarouselCollectionView"
     }
 }
