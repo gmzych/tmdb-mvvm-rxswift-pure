@@ -13,13 +13,17 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    override func awakeFromNib() {
+        configureAccessiblityId()
+    }
+    
     private struct Constants {
         static let maxHeight: CGFloat = 400
     }
     
     private static let sizingCell = UINib(nibName: String(describing: MovieCell.self), bundle: nil)
         .instantiate(withOwner: nil, options: nil).first! as! MovieCell
-
+    
     static func height(forWidth width: CGFloat) -> CGFloat {
         sizingCell.prepareForReuse()
         sizingCell.layoutIfNeeded()
@@ -35,5 +39,11 @@ class MovieCell: UICollectionViewCell {
         }
         
         return size.height
+    }
+    
+    private func configureAccessiblityId() {
+        imageView.accessibilityIdentifier = "discoverMovieCellImage"
+        titleLabel.accessibilityIdentifier = "discoverMovieCellTitleLabel"
+        subtitleLabel.accessibilityIdentifier = "discoverMovieCellSubtitleLabel"
     }
 }
