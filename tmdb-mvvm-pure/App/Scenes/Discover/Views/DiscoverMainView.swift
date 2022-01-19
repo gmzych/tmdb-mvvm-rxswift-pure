@@ -107,6 +107,8 @@ extension DiscoverMainView: UICollectionViewDataSource {
         if let url = item.imageUrl {
             Nuke.loadImage(with: URL(string: url)!, into: cell.imageView)
         }
+        cell.accessibilityIdentifier = "discoverMovieCell"
+        
         return cell
     }
 }

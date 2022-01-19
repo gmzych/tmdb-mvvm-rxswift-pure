@@ -30,8 +30,8 @@
             filePath = "tmdb-mvvm-pureUITests/Tests/tmdb_mvvm_pureUITests_BDD.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "testSearchEnginePeople()"
             landmarkType = "7">
          </BreakpointContent>
