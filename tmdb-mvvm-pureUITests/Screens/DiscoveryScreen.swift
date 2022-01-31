@@ -11,72 +11,73 @@ class DiscoveryScreen: BaseScreen {
     private lazy var firstHomePageHeader: XCUIElement = app.staticTexts["Popular movies"]
     private lazy var secondHomePageHeader: XCUIElement = app.staticTexts["Trending people"]
     private lazy var thirdHomePageHeader: XCUIElement = app.staticTexts["TV shows"]
-    private lazy var lastElementOfFirstSlider: XCUIElement = app.staticTexts["2021-04-15"]
-    private lazy var lastElementOfSecondSlider: XCUIElement = app.staticTexts["Finn Little"]
-    private lazy var lastElementOfThirdSLider: XCUIElement = app.staticTexts["2022-01-05"]
+    private lazy var lastElementOfFirstSlider: XCUIElement = app.staticTexts["2021-11-10"]
+    private lazy var lastElementOfSecondSlider: XCUIElement = app.staticTexts["Henry Cavill"]
+    private lazy var lastElementOfThirdSLider: XCUIElement = app.staticTexts["2021-10-12"]
+    private lazy var firstElementOfSecondSlider: XCUIElement = app.staticTexts["Tom Holland"]
     private lazy var searchElementButton: XCUIElement = app.buttons["Search"]
     private lazy var discoverElementButtton: XCUIElement = app.buttons["Discover"]
     
-    func givenAppIsLaunched(){
-        XCTAssertTrue(welcomeMessage.exists)
-    }
-    func loginInputIsTapped(yourUsername: String){
+    func isFailurePopUpDispalyed() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
+    }   // funkcja is visibled
+    func enterLogin(_ login: String){
         loginTextField.tap()
-        loginTextField.typeText("iostest")
+        loginTextField.typeText(login)
     }
-    func keyboardPopUpLogin(){
-        popUpretunButton.tap()
+    func closeKeyboardLogin(){
+        _ = popUpretunButton.waitForExistence(timeout: 1)
+        return popUpretunButton.tap()
     }
-    func passwordInputIsTapped(yourPassword: String){
+    func enterPassword(_ password: String){
         passwordTextField.tap()
-        passwordTextField.typeText("test")
+        passwordTextField.typeText(password)
     }
-    func keyboardPopUpPassword(){
+    func closeKeyboardPassword(){
+        _ = popUpretunButton.waitForExistence(timeout: 1)
         popUpretunButton.tap()
     }
-    func iShouldLoginSuccesfully(){
-        signInButton.tap()
-        sleep(3)
-        XCTAssertTrue(firstHomePageHeader.exists)
+    func loginIsSuccessful() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
     }
     func swipeFirstSlider(){
         app.scrollToElementSwipeLeft(element:lastElementOfFirstSlider)
     }
-    func thenIshouldSeeLastElementOfTheFirstSlider()
-    {
-        XCTAssertTrue(lastElementOfFirstSlider.exists)
+    func islastElementOfTheFirstSliderIsDisplayed() -> Bool{
+        //_ = lastElementOfFirstSlider.waitForExistence(timeout: 3)
+        return lastElementOfFirstSlider.exists
     }
     func swipeSecondSlider(){
-        app.swipeUp(velocity: 30)
+        sleep(3)
+        app.gentleSwipe(XCUIElement.direction.Up)
         app.scrollToElementSwipeLeft(element: lastElementOfSecondSlider)
     }
-    func thenIshouldSeeLastElementOfTheSecondSlider(){
-        XCTAssertTrue(lastElementOfSecondSlider.exists)
+    func islastElementOfTheSecondSliderIsDisplayed() -> Bool{
+        _ = lastElementOfSecondSlider.waitForExistence(timeout: 3)
+        return lastElementOfSecondSlider.exists
     }
     func swipeThirdSlider(){
-        app.swipeUp()
-        // wybrac ostatni slider z dostepnych dwoch na tym widoku
-        if thirdHomePageHeader.exists{
-                
-                app.scrollToElementSwipeLeft(element: lastElementOfThirdSLider)
-        }
-        else
-        {
-            app.swipeUp()
-        }
+        sleep(3)
+        scrollUntilElementAppears(element: thirdHomePageHeader)
+        app.scrollToElementSwipeLeft(element: lastElementOfThirdSLider)
     }
-    func thenIshouldSeeLastElementOfTheThirdSlider(){
-        XCTAssertTrue(lastElementOfThirdSLider.exists)
+    func isLastElementOfTheThirdSliderDisplayed() -> Bool{
+        _ = lastElementOfThirdSLider.waitForExistence(timeout: 3)
+        return lastElementOfThirdSLider.exists
     }
-    func thenIShouldSeeFirstHomePageHeader(){
-        XCTAssertTrue(firstHomePageHeader.exists)
+    func isFirstHeaderDisplayed() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
     }
-    func thenIshouldSeeSecondHomePageHeader(){
-        XCTAssertTrue(secondHomePageHeader.exists)
+    func isSecondHeaderDisplayed() -> Bool{
+        _ = secondHomePageHeader.waitForExistence(timeout: 3)
+        return secondHomePageHeader.exists
     }
-    func thenIshouldSeeThirdHomePageHeader(){
-        app.scrollToElementSwipeUp(element: thirdHomePageHeader)
-        XCTAssertTrue(thirdHomePageHeader.exists)
+    func isThirdHeaderDisplayed() -> Bool{
+        _ = thirdHomePageHeader.waitForExistence(timeout: 3)
+        return thirdHomePageHeader.exists
     }
     func scrollDownToTheBottom(){
         app.scrollToElementSwipeUp(element: thirdHomePageHeader)
@@ -86,5 +87,14 @@ class DiscoveryScreen: BaseScreen {
     }
     func tapOnDiscoverButton(){
         discoverElementButtton.tap()
+    }
+    func loginUserWith(_ login: String,_  password: String){
+        loginTextField.tap()
+        loginTextField.typeText(login)
+        popUpretunButton.tap()
+        passwordTextField.tap()
+        passwordTextField.typeText(password)
+        popUpretunButton.tap()
+        signInButton.tap()
     }
 }

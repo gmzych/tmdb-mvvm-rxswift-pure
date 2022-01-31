@@ -51,14 +51,15 @@
 		D27F826921FE49D60071513F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826821FE49D60071513F /* LoginViewModel.swift */; };
 		D27F826B21FE4A160071513F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826A21FE4A160071513F /* ViewModelType.swift */; };
 		D27F826E21FE4B440071513F /* TMDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F826D21FE4B440071513F /* TMDBApi.swift */; };
-		F48ACFB42790196F00D45B47 /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48ACFB32790196F00D45B47 /* BaseTests.swift */; };
+		F44E786227A20D4F0063CE5C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E786127A20D4F0063CE5C /* UserData.swift */; };
+		F48ACFB42790196F00D45B47 /* BaseTestsSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48ACFB32790196F00D45B47 /* BaseTestsSuite.swift */; };
 		F48ACFB627901A0E00D45B47 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48ACFB527901A0E00D45B47 /* BaseScreen.swift */; };
-		F4F1B5002789E1E8009CB911 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */; };
-		F4F1B5022789E21E009CB911 /* DiscoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */; };
+		F4F1B5002789E1E8009CB911 /* SearchTestsSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B4FF2789E1E8009CB911 /* SearchTestsSuite.swift */; };
+		F4F1B5022789E21E009CB911 /* DiscoveryTestsSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5012789E21E009CB911 /* DiscoveryTestsSuite.swift */; };
 		F4F1B5072789E4C2009CB911 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5062789E4C2009CB911 /* LoginScreen.swift */; };
 		F4F1B5092789E573009CB911 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B5082789E573009CB911 /* SearchScreen.swift */; };
 		F4F1B50C2789E593009CB911 /* DiscoveryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */; };
-		F4F1B50E2789EE3C009CB911 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B50D2789EE3C009CB911 /* LoginTests.swift */; };
+		F4F1B50E2789EE3C009CB911 /* LoginTestsSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1B50D2789EE3C009CB911 /* LoginTestsSuite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,14 +132,15 @@
 		D27F826821FE49D60071513F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D27F826A21FE4A160071513F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		D27F826D21FE4B440071513F /* TMDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApi.swift; sourceTree = "<group>"; };
-		F48ACFB32790196F00D45B47 /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
+		F44E786127A20D4F0063CE5C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		F48ACFB32790196F00D45B47 /* BaseTestsSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestsSuite.swift; sourceTree = "<group>"; };
 		F48ACFB527901A0E00D45B47 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
-		F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
-		F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTests.swift; sourceTree = "<group>"; };
+		F4F1B4FF2789E1E8009CB911 /* SearchTestsSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTestsSuite.swift; sourceTree = "<group>"; };
+		F4F1B5012789E21E009CB911 /* DiscoveryTestsSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTestsSuite.swift; sourceTree = "<group>"; };
 		F4F1B5062789E4C2009CB911 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		F4F1B5082789E573009CB911 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryScreen.swift; sourceTree = "<group>"; };
-		F4F1B50D2789EE3C009CB911 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		F4F1B50D2789EE3C009CB911 /* LoginTestsSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestsSuite.swift; sourceTree = "<group>"; };
 		F4F76766277B02EC0063B22E /* tmdb-mvvm-pureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tmdb-mvvm-pureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -373,10 +375,10 @@
 		F43FC9EE2783A592005BFEF9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F4F1B50D2789EE3C009CB911 /* LoginTests.swift */,
-				F4F1B5012789E21E009CB911 /* DiscoveryTests.swift */,
-				F4F1B4FF2789E1E8009CB911 /* SearchTests.swift */,
-				F48ACFB32790196F00D45B47 /* BaseTests.swift */,
+				F4F1B50D2789EE3C009CB911 /* LoginTestsSuite.swift */,
+				F4F1B5012789E21E009CB911 /* DiscoveryTestsSuite.swift */,
+				F4F1B4FF2789E1E8009CB911 /* SearchTestsSuite.swift */,
+				F48ACFB32790196F00D45B47 /* BaseTestsSuite.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -388,6 +390,7 @@
 				F4F1B50B2789E593009CB911 /* DiscoveryScreen.swift */,
 				F4F1B5082789E573009CB911 /* SearchScreen.swift */,
 				F48ACFB527901A0E00D45B47 /* BaseScreen.swift */,
+				F44E786127A20D4F0063CE5C /* UserData.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -659,12 +662,13 @@
 			files = (
 				F4F1B5072789E4C2009CB911 /* LoginScreen.swift in Sources */,
 				F48ACFB627901A0E00D45B47 /* BaseScreen.swift in Sources */,
-				F4F1B5002789E1E8009CB911 /* SearchTests.swift in Sources */,
-				F4F1B5022789E21E009CB911 /* DiscoveryTests.swift in Sources */,
+				F4F1B5002789E1E8009CB911 /* SearchTestsSuite.swift in Sources */,
+				F4F1B5022789E21E009CB911 /* DiscoveryTestsSuite.swift in Sources */,
 				F4F1B50C2789E593009CB911 /* DiscoveryScreen.swift in Sources */,
-				F48ACFB42790196F00D45B47 /* BaseTests.swift in Sources */,
+				F48ACFB42790196F00D45B47 /* BaseTestsSuite.swift in Sources */,
 				F4F1B5092789E573009CB911 /* SearchScreen.swift in Sources */,
-				F4F1B50E2789EE3C009CB911 /* LoginTests.swift in Sources */,
+				F44E786227A20D4F0063CE5C /* UserData.swift in Sources */,
+				F4F1B50E2789EE3C009CB911 /* LoginTestsSuite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
