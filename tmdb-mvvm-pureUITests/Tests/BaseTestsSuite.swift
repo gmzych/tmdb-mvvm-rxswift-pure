@@ -1,8 +1,7 @@
 import XCTest
 import Foundation
 
-class BaseTests: XCTestCase {
-    
+class BaseTestsSuite: XCTestCase {
     var app = XCUIApplication()
     override func setUp(){
         super.setUp()
@@ -12,5 +11,4 @@ class BaseTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
 }

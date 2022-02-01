@@ -11,83 +11,73 @@ class DiscoveryScreen: BaseScreen {
     private lazy var firstHomePageHeader: XCUIElement = app.staticTexts["Popular movies"]
     private lazy var secondHomePageHeader: XCUIElement = app.staticTexts["Trending people"]
     private lazy var thirdHomePageHeader: XCUIElement = app.staticTexts["TV shows"]
-    private lazy var lastElementOfFirstSlider: XCUIElement = app.staticTexts["2021-04-15"]
-    private lazy var lastElementOfSecondSlider: XCUIElement = app.staticTexts["Finn Little"]
-    private lazy var lastElementOfThirdSLider: XCUIElement = app.staticTexts["2022-01-05"]
+    private lazy var lastElementOfFirstSlider: XCUIElement = app.staticTexts["2021-11-10"]
+    private lazy var lastElementOfSecondSlider: XCUIElement = app.staticTexts["Henry Cavill"]
+    private lazy var lastElementOfThirdSLider: XCUIElement = app.staticTexts["2021-10-12"]
+    private lazy var firstElementOfSecondSlider: XCUIElement = app.staticTexts["Tom Holland"]
     private lazy var searchElementButton: XCUIElement = app.buttons["Search"]
     private lazy var discoverElementButtton: XCUIElement = app.buttons["Discover"]
-    private lazy var descriptionMovieTitle: XCUIElement = app.staticTexts["Eternals"]
-    private lazy var firstMovieFromTheFirstSlider: XCUIElement = app.staticTexts["Eternals"]
-    private lazy var firstMovieFromTheFirstSliderTitle: XCUIElement = app.staticTexts["Eternals"]
-    private lazy var firstMovieFromTheFirstSliderStarIcon: XCUIElement = app.icons[""]
-    private lazy var firstMovieFromTheSliderDescriptionArrowBack: XCUIElement = app.images["star_icon"]
-    private lazy var firstMovieFromTheFirstSliderDate: XCUIElement = app.staticTexts["2021-11-03"]
-    private lazy var firstMovieFromTheFirstSliderMovieType: XCUIElement = app.staticTexts["Action, Adventure"]
-    private lazy var firstMovieFromTheFirstSliderTime: XCUIElement = app.staticTexts["2hr 36min"]
-    private lazy var firstMovieFromTheFirstSliderMovieRating: XCUIElement = app.staticTexts["7.3"]
-    private lazy var firstMovieFromTheFirstSliderOverviewTitle: XCUIElement = app.staticTexts["Overview"]
-    private lazy var firstMovieFromTheFirstSliderVoteCount: XCUIElement = app.staticTexts["Vote count"]
-    private lazy var firstMovieFromTheFirstSliderStatusTitle: XCUIElement = app.staticTexts["Status"]
-    func givenAppIsLaunched(){
-        XCTAssertTrue(welcomeMessage.exists)
-    }
-    func loginInputIsTapped(yourUsername: String){
+    
+    func isFailurePopUpDispalyed() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
+    }   // funkcja is visibled
+    func enterLogin(_ login: String){
         loginTextField.tap()
-        loginTextField.typeText("iostest")
+        loginTextField.typeText(login)
     }
-    func keyboardPopUpLogin(){
-        popUpretunButton.tap()
+    func closeKeyboardLogin(){
+        _ = popUpretunButton.waitForExistence(timeout: 1)
+        return popUpretunButton.tap()
     }
-    func passwordInputIsTapped(yourPassword: String){
+    func enterPassword(_ password: String){
         passwordTextField.tap()
-        passwordTextField.typeText("test")
+        passwordTextField.typeText(password)
     }
-    func keyboardPopUpPassword(){
+    func closeKeyboardPassword(){
+        _ = popUpretunButton.waitForExistence(timeout: 1)
         popUpretunButton.tap()
     }
-    func iShouldLoginSuccesfully(){
-        signInButton.tap()
-        sleep(3)
-        XCTAssertTrue(firstHomePageHeader.exists)
+    func loginIsSuccessful() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
     }
     func swipeFirstSlider(){
         app.scrollToElementSwipeLeft(element:lastElementOfFirstSlider)
     }
-    func thenIshouldSeeLastElementOfTheFirstSlider()
-    {
-        XCTAssertTrue(lastElementOfFirstSlider.exists)
+    func islastElementOfTheFirstSliderIsDisplayed() -> Bool{
+        //_ = lastElementOfFirstSlider.waitForExistence(timeout: 3)
+        return lastElementOfFirstSlider.exists
     }
     func swipeSecondSlider(){
-        app.swipeUp(velocity: 30)
+        sleep(3)
+        app.gentleSwipe(XCUIElement.direction.Up)
         app.scrollToElementSwipeLeft(element: lastElementOfSecondSlider)
     }
-    func thenIshouldSeeLastElementOfTheSecondSlider(){
-        XCTAssertTrue(lastElementOfSecondSlider.exists)
+    func islastElementOfTheSecondSliderIsDisplayed() -> Bool{
+        _ = lastElementOfSecondSlider.waitForExistence(timeout: 3)
+        return lastElementOfSecondSlider.exists
     }
     func swipeThirdSlider(){
-        app.swipeUp()
-        // wybrac ostatni slider z dostepnych dwoch na tym widoku
-        if thirdHomePageHeader.exists{
-                
-                app.scrollToElementSwipeLeft(element: lastElementOfThirdSLider)
-        }
-        else
-        {
-            app.swipeUp()
-        }
+        sleep(3)
+        scrollUntilElementAppears(element: thirdHomePageHeader)
+        app.scrollToElementSwipeLeft(element: lastElementOfThirdSLider)
     }
-    func thenIshouldSeeLastElementOfTheThirdSlider(){
-        XCTAssertTrue(lastElementOfThirdSLider.exists)
+    func isLastElementOfTheThirdSliderDisplayed() -> Bool{
+        _ = lastElementOfThirdSLider.waitForExistence(timeout: 3)
+        return lastElementOfThirdSLider.exists
     }
-    func thenIShouldSeeFirstHomePageHeader(){
-        XCTAssertTrue(firstHomePageHeader.exists)
+    func isFirstHeaderDisplayed() -> Bool{
+        _ = firstHomePageHeader.waitForExistence(timeout: 3)
+        return firstHomePageHeader.exists
     }
-    func thenIshouldSeeSecondHomePageHeader(){
-        XCTAssertTrue(secondHomePageHeader.exists)
+    func isSecondHeaderDisplayed() -> Bool{
+        _ = secondHomePageHeader.waitForExistence(timeout: 3)
+        return secondHomePageHeader.exists
     }
-    func thenIshouldSeeThirdHomePageHeader(){
-        app.scrollToElementSwipeUp(element: thirdHomePageHeader)
-        XCTAssertTrue(thirdHomePageHeader.exists)
+    func isThirdHeaderDisplayed() -> Bool{
+        _ = thirdHomePageHeader.waitForExistence(timeout: 3)
+        return thirdHomePageHeader.exists
     }
     func scrollDownToTheBottom(){
         app.scrollToElementSwipeUp(element: thirdHomePageHeader)
@@ -98,42 +88,13 @@ class DiscoveryScreen: BaseScreen {
     func tapOnDiscoverButton(){
         discoverElementButtton.tap()
     }
-    func tapOnFirstMovie(){
-        firstMovieFromTheFirstSlider.tap()
-    }
-    func thenIShouldSeeMovieTitle(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderTitle.exists)
-    }
-    func thenIShouldSeeMovieDesciption(){
-        let predicate = NSPredicate(format: "label LIKE 'The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.'")
-        let element = app.staticTexts.element(matching: predicate)
-        XCTAssertTrue(element.exists)
-    }
-    func tapOnArrowBack(){
-        firstMovieFromTheSliderDescriptionArrowBack.tap()
-    }
-    func thenIShouldSeeStarIcon(){
-        XCTAssertTrue(firstMovieFromTheSliderDescriptionArrowBack.exists)
-    }
-    func thenIShouldSeeDate(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderDate.exists)
-    }
-    func thenIShouldSeeMovieType(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderMovieType.exists)
-    }
-    func thenIShouldSeeTime(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderTime.exists)
-    }
-    func thenIShouldSeeMovieRating(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderMovieRating.exists)
-    }
-    func thenIShouldSeeOverviewTitle(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderOverviewTitle.exists)
-    }
-    func thenIShouldSeeVoteCountTitle(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderVoteCount.exists)
-    }
-    func thenIShouldSeeStatusTitle(){
-        XCTAssertTrue(firstMovieFromTheFirstSliderStatusTitle.exists)
+    func loginUserWith(_ login: String,_  password: String){
+        loginTextField.tap()
+        loginTextField.typeText(login)
+        popUpretunButton.tap()
+        passwordTextField.tap()
+        passwordTextField.typeText(password)
+        popUpretunButton.tap()
+        signInButton.tap()
     }
 }

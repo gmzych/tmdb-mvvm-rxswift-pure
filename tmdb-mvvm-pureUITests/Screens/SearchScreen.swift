@@ -13,27 +13,24 @@ class SearchScreen: BaseScreen {
     private lazy var thirdHomePageHeader: XCUIElement = app.staticTexts["TV shows"]
     private lazy var searchElementButton: XCUIElement = app.buttons["Search"]
     private lazy var searchInput: XCUIElement = app.textFields["Search"]
-    private lazy var searchIcon: XCUIElement = app.textFields["search_icon"]
+    private lazy var searchIcon: XCUIElement = app.images["search_icon"]
     private lazy var queryResultFirstRecordFromTheMoviesList: XCUIElement = app.staticTexts["Captain Marvel"]
     private lazy var queryResultFirstRecordFromThePeopleList: XCUIElement = app.staticTexts["Elizabeth Marvel"]
     private lazy var queryResultLasttRecordFromTheMoviesList = app.staticTexts["Marvel Rising: Operation Shuri"]
-    private lazy var queryResultLastRecordFromThePeopleList = app.staticTexts["Kimberly Marvel"]
+    private lazy var queryResultLastRecordFromThePeopleList = app.staticTexts["Marvel Spencer"]
     private lazy var peopleButton = app.buttons["People"]
     private lazy var moviesButton = app.buttons["Movies"]
     
-    func givenAppIsLaunched(){
-        XCTAssertTrue(welcomeMessage.exists)
-    }
-    func loginInputIsTapped(yourUsername: String){
+    func enterLogin(_ login: String){
         loginTextField.tap()
-        loginTextField.typeText("iostest")
+        loginTextField.typeText(login)
     }
     func keyboardPopUpLogin(){
         popUpretunButton.tap()
     }
-    func passwordInputIsTapped(yourPassword: String){
+    func enterPassword(_ password: String){
         passwordTextField.tap()
-        passwordTextField.typeText("test")
+        passwordTextField.typeText(password)
     }
     func keyboardPopUpPassword(){
         popUpretunButton.tap()
@@ -52,33 +49,37 @@ class SearchScreen: BaseScreen {
         app.scrollToElementSwipeUp(element: thirdHomePageHeader)
     }
     func tapOnSearchButton(){
-        searchElementButton.tap()
+        return searchElementButton.tap()
     }
-    func thenIShouldSeeSearchInput(){
-        XCTAssertTrue(searchInput.exists)
+    func isSearchInputDisplayed() -> Bool{
+        _ = searchInput.waitForExistence(timeout: 3)
+        return searchInput.exists
     }
-    func thenIshouldSeeSearchIcon(){
-        XCTAssertTrue(searchIcon.exists)
+    func isSearchIconDisplayed() -> Bool{
+        _ = searchIcon.waitForExistence(timeout: 3)
+        return searchIcon.exists
     }
     func iShouldSeeSearchInput(){
         XCTAssertTrue(searchIcon.exists)
     }
-    func typeQueryInSearchInput(){
+    func insertTextInSearchInput(){
         searchInput.tap()
         searchInput.typeText("Marvel")
     }
-    func keyboardPopUpSearchEngine(){
+    func closeKeyboard(){
         popUpretunButton.tap()
         sleep(3)
     }
-    func thenIShouldSeeMoviesQuerySearchResult(){
-        XCTAssertTrue(queryResultFirstRecordFromTheMoviesList.exists)
+    func isMoviesListDisplayed() -> Bool{
+        _ = queryResultFirstRecordFromTheMoviesList.waitForExistence(timeout: 3)
+        return queryResultFirstRecordFromTheMoviesList.exists
     }
-    func thenIShouldSeePeopleQueryResult(){
-        XCTAssertTrue(queryResultFirstRecordFromThePeopleList.exists)
+    func isPeopleListDisplayed() -> Bool{
+        _ = queryResultFirstRecordFromThePeopleList.waitForExistence(timeout: 3)
+        return queryResultLastRecordFromThePeopleList.exists
     }
     func tapOnPeopleButton(){
-        peopleButton.tap()
+        return peopleButton.tap()
     }
     func tapOnMoviesButton(){
         moviesButton.tap()
@@ -89,8 +90,17 @@ class SearchScreen: BaseScreen {
     func swipeInPeopleSearchEngine(){
         app.swipeUp()
     }
-    func thenIshouldSeeBottom(){
+    func isBottomOfTheListDisplayed() -> Bool{
         app.scrollToElementSwipeUp(element: queryResultLasttRecordFromTheMoviesList)
-        XCTAssertTrue(queryResultLastRecordFromThePeopleList.exists)
+        return queryResultLastRecordFromThePeopleList.exists
+    }
+    func loginUserWith(_ login: String,_  password: String){
+        loginTextField.tap()
+        loginTextField.typeText(login)
+        popUpretunButton.tap()
+        passwordTextField.tap()
+        passwordTextField.typeText(password)
+        popUpretunButton.tap()
+        signInButton.tap()
     }
 }
